@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-procedimientos-medicos
+  datasource:
+    url: ${DB_MS_PROCEDIMIENTOS_MEDICOS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_PROCEDIMIENTOS_MEDICOS}
+
+
+# App metadata
+info:
+  app:
+    name: Procedimientos Médicos
+    description: Rancho Smart MS Procedimientos Médicos es un microservicio que gestiona los procedimientos médicos realizados en el ganado, incluyendo registros detallados, seguimiento de tratamientos y evaluación de resultados, para garantizar la salud y el bienestar animal.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

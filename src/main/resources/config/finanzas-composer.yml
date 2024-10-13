@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: finanzas-composer
+
+server:
+  port: ${SERVER_PORT_FINANZAS_COMPOSER}
+
+
+# App metadata
+info:
+  app:
+    name: Finanzas Composer
+    description: El "Finanzas Composer" en Rancho Smart integra y gestiona la información financiera, orquestando datos sobre gastos, ingresos y presupuestos, para proporcionar una visión completa y optimizada de la salud financiera de las operaciones ganaderas.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

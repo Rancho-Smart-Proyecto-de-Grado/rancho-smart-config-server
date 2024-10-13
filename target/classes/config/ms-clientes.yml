@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-clientes
+  datasource:
+    url: ${DB_MS_CLIENTES_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_CLIENTES}
+
+
+# App metadata
+info:
+  app:
+    name: Clientes
+    description: Rancho Smart MS Clientes es un microservicio que gestiona la información de los clientes, incluyendo registros de contacto, historial de compras y preferencias, para mejorar la atención y fomentar relaciones comerciales efectivas.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

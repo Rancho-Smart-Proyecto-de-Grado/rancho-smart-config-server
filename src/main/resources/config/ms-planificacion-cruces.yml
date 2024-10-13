@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ms-planificacion-cruces
+  datasource:
+    url: ${DB_MS_PLANIFICACION_CRUCES_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_PLANIFICACION_CRUCES}
+
+# App metadata
+info:
+  app:
+    name: Planificación de Cruces
+    description: Rancho Smart MS Planificación Cruces es un microservicio dedicado a la planificación y gestión de cruzas en el ganado, facilitando el registro de apareamientos programados y optimizando la genética para mejorar la calidad y productividad de las crías.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

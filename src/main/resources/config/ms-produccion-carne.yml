@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-produccion-carne
+  datasource:
+    url: ${DB_MS_PRODUCCION_CARNE_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_PRODUCCION_CARNE}
+
+
+# App metadata
+info:
+  app:
+    name: Producción de Carne
+    description: Rancho Smart MS Producción Carne es un microservicio que gestiona la producción de carne en la finca, incluyendo el seguimiento de animales destinados para este fin, asegurando una operación eficiente.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

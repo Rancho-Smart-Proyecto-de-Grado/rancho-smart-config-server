@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-contabilidad
+  datasource:
+    url: ${DB_MS_CONTABILIDAD_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_CONTABILIDAD}
+
+
+# App metadata
+info:
+  app:
+    name: Contabilidad
+    description: Rancho Smart MS Contabilidad es un microservicio que gestiona la información financiera de la finca, incluyendo el registro de ingresos, gastos y reportes contables, para asegurar un control financiero eficiente y transparente.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

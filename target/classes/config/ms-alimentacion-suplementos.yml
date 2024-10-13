@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-alimentacion-suplementos
+  datasource:
+    url: ${DB_MS_ALIMENTACION_SUPLEMENTOS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_ALIMENTACION_SUPLEMENTOS}
+
+
+# App metadata
+info:
+  app:
+    name: Alimentacion y Suplementos
+    description: Rancho Smart MS Alimentación y Suplementos es un microservicio que gestiona el registro de la alimentación y suplementos administrados al ganado, permitiendo el seguimiento de las dietas, cantidades y frecuencia, asegurando una nutrición adecuada.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ms-control-calidad
+  datasource:
+    url: ${DB_MS_CONTROL_CALIDAD_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_CONTROL_CALIDAD}
+
+# App metadata
+info:
+  app:
+    name: Control de Calidad
+    description: Rancho Smart MS Control Calidad es un microservicio que gestiona la evaluación de la calidad de los productos ganaderos, como carne y leche, garantizando que cumplan con los estándares requeridos para asegurar un producto final óptimo.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

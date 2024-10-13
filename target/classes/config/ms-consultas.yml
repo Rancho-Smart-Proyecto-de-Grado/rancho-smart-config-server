@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-consultas
+  datasource:
+    url: ${DB_MS_CONSULTAS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_CONSULTAS}
+
+
+# App metadata
+info:
+  app:
+    name: Consultas
+    description: Rancho Smart MS Consultas es un microservicio diseñado para gestionar las consultas veterinarias del ganado, facilitando el registro, seguimiento y análisis de la salud de los animales, y asegurando un tratamiento adecuado y oportuno.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

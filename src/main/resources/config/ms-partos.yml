@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-partos
+  datasource:
+    url: ${DB_MS_PARTOS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_PARTOS}
+
+
+# App metadata
+info:
+  app:
+    name: Partos
+    description: Rancho Smart MS Partos es un microservicio encargado de gestionar la información sobre los partos del ganado, incluyendo el registro de fechas, condiciones y seguimiento de crías, asegurando una adecuada atención y manejo reproductivo en la finca.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

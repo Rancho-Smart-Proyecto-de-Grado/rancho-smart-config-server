@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-vacunas
+  datasource:
+    url: ${DB_MS_VACUNAS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_VACUNAS}
+
+
+# App metadata
+info:
+  app:
+    name: Vacunas
+    description: Rancho Smart MS Vacunas es un microservicio encargado de gestionar la administración de vacunas para el ganado, incluyendo el registro, seguimiento y programación de vacunaciones, asegurando la salud y prevención de enfermedades en los animales.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-produccion-leche
+  datasource:
+    url: ${DB_MS_PRODUCCION_LECHE_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_PRODUCCION_LECHE}
+
+
+# App metadata
+info:
+  app:
+    name: Producción de Leche
+    description: Rancho Smart MS Producción Leche es un microservicio encargado de gestionar la producción de leche en la finca, controlando el rendimiento de las vacas lecheras, la calidad del producto y los registros de ordeño.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

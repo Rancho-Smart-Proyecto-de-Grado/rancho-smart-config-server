@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-inventario-ventas
+  datasource:
+    url: ${DB_MS_INVENTARIO_VENTAS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_INVENTARIO_VENTAS}
+
+
+# App metadata
+info:
+  app:
+    name: Inventario Ventas
+    description: Rancho Smart MS Inventario Ventas es un microservicio que gestiona el inventario de productos destinados a la venta, registrando las cantidades disponibles y controlando el flujo de productos vendidos para asegurar una administración eficiente.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-usuarios
+  datasource:
+    url: ${DB_MS_USUARIOS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_USUARIOS}
+
+
+# App metadata
+info:
+  app:
+    name: Usuarios
+    description: Rancho Smart MS Usuarios es un microservicio que gestiona la información de los usuarios del sistema, incluyendo la creación de cuentas, roles, permisos y seguimiento de actividades, para garantizar una administración segura y eficiente de los accesos.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

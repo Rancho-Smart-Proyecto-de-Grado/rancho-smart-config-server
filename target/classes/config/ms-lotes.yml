@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-lotes
+  datasource:
+    url: ${DB_MS_LOTES_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_LOTES}
+
+
+# App metadata
+info:
+  app:
+    name: Lotes
+    description: Rancho Smart MS Lotes es un microservicio dedicado a la gestión de lotes de ganado, permitiendo el seguimiento y administración de grupos de animales, su ubicación y características, para optimizar la producción y la salud en la finca.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

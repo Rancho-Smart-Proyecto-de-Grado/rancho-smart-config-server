@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: infraestructura-composer
+
+server:
+  port: ${SERVER_PORT_INFRAESTRUCTURA_COMPOSER}
+
+
+# App metadata
+info:
+  app:
+    name: Infraestructura Composer
+    description: El "Infraestructura y Equipamiento Composer" en Rancho Smart gestiona la comunicación entre microservicios relacionados con la infraestructura y el equipamiento ganadero, asegurando una administración eficiente de los recursos físicos y tecnológicos en las fincas.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

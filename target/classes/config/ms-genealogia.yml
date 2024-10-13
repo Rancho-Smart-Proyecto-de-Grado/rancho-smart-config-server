@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-genealogia
+  datasource:
+    url: ${DB_MS_GENEALOGIA_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_GENEALOGIA}
+
+
+# App metadata
+info:
+  app:
+    name: Genealogia
+    description: Rancho Smart MS Genealogía es un microservicio que gestiona la información sobre la genealogía del ganado, registrando datos de linaje, ascendencia y descendencia, para facilitar la toma de decisiones en la cría y mejora genética.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

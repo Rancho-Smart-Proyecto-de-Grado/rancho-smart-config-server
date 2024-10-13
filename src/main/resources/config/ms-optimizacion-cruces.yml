@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-optimizacion-cruces
+  datasource:
+    url: ${DB_MS_OPTIMIZACION_CRUCES_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_OPTIMIZACION_CRUCES}
+
+
+# App metadata
+info:
+  app: 
+    name: Optimización de Cruces
+    description: Rancho Smart MS Optimización Cruces es un microservicio que analiza y mejora los procesos de cruzamiento en el ganado, utilizando datos de genética y rendimiento para maximizar la calidad y eficiencia de la producción de crías.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

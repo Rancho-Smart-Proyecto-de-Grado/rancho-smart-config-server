@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-ventas
+  datasource:
+    url: ${DB_MS_VENTAS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_VENTAS}
+
+
+# App metadata
+info:
+  app:
+    name: Ventas
+    description: Rancho Smart MS Ventas es un microservicio encargado de registrar las ventas de ganado y productos derivados, almacenando información sobre cada transacción de manera eficiente para su posterior seguimiento.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

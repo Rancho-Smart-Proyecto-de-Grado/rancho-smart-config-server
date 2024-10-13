@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-tratamientos
+  datasource:
+    url: ${DB_MS_TRATAMIENTOS_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_TRATAMIENTOS}
+
+
+# App metadata
+info:
+  app:
+    name: Tratamientos
+    description: Rancho Smart MS Tratamientos es un microservicio dedicado a gestionar los tratamientos veterinarios del ganado, incluyendo el registro, seguimiento y evaluación de procedimientos médicos, garantizando la salud y el bienestar de los animales en la finca.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

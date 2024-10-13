@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: inventario-composer
+
+server:
+  port: ${SERVER_PORT_INVENTARIO_COMPOSER}
+
+
+# App metadata
+info:
+  app:
+    name: Inventario Composer
+    description: El "Inventario Composer" en Rancho Smart gestiona y unifica información sobre lotes, vacas, animales y alimentos, facilitando la administración integral de los recursos ganaderos para una operación eficiente y efectiva.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

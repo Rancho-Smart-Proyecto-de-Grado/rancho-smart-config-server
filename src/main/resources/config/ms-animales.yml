@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-animales
+  datasource:
+    url: ${DB_MS_ANIMALES_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_ANIMALES}
+
+
+# App metadata
+info:
+  app:
+    name: Animales
+    description: Rancho Smart MS Animales es un microservicio que gestiona la información y el registro de los animales en la finca, incluyendo datos sobre su identificación, raza, salud y genealogía, para asegurar una administración eficiente y efectiva del ganado.
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

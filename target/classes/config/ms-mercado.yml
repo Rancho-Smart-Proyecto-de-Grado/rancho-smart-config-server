@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-mercado
+  datasource:
+    url: ${DB_MS_MERCADO_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+server:
+  port: ${SERVER_PORT_MERCADO}
+
+
+# App metadata
+info:
+  app:
+    name: Mercado
+    description: Rancho Smart MS Mercado 
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}
