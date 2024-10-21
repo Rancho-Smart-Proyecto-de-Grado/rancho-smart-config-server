@@ -1,8 +1,19 @@
+spring:
+  datasource:
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      driver-class-name: ${DB_DRIVER}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: ${DB_DIALECT}
+    
 eureka:
   client:
     registerWithEureka: true
     service-url:
-      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
+      defaultZone: ${EUREKA_SERVER_URL}
   instance:
     prefer-ip-address: true
 

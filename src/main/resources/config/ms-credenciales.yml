@@ -1,18 +1,16 @@
 spring:
   application:
-    name: ms-mercado
+    name: ms-credenciales
   datasource:
-    url: ${DB_MS_MERCADO_URL}
+    url: ${DB_MS_CREDENCIALES_URL}
 
 server:
-  port: ${SERVER_PORT_MERCADO}
-
+  port: ${SERVER_PORT_CREDENCIALES}
 
 # App metadata
 info:
   app:
-    name: Mercado
-    description: Rancho Smart MS Mercado 
+    name: Control de Calidad
     version: 1.0.0
   company:
     name: Rancho Smart

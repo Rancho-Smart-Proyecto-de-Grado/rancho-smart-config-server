@@ -3,8 +3,6 @@ spring:
     name: ms-lotes
   datasource:
     url: ${DB_MS_LOTES_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
 
 server:
   port: ${SERVER_PORT_LOTES}
