@@ -1,10 +1,37 @@
 spring:
   application:
     name: inventario-composer
+  cloud:
+    gateway:
+      routes:
+        - id: alimentos
+          uri: lb://ms-alimentos
+          predicates:
+            - Path=/alimentos/**
+
+        - id: animales
+          uri: lb://ms-animales
+          predicates:
+            - Path=/animales/**
+
+        - id: lotes
+          uri: lb://ms-lotes
+          predicates:
+            - Path=/lotes/**
+            
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
 
 server:
   port: ${SERVER_PORT_INVENTARIO_COMPOSER}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: inventario-composer
+    instance-id: inventario-composer
 
 # App metadata
 info:

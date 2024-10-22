@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_INFRAESTRUCTURA}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-infraestructura
+    instance-id: ms-infraestructura
 
 # App metadata
 info:

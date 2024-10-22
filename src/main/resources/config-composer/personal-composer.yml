@@ -1,10 +1,32 @@
 spring:
   application:
     name: personal-composer
+  cloud:
+    gateway:
+      routes:
+        - id: usuarios
+          uri: lb://ms-usuarios
+          predicates:
+            - Path=/usuarios/**
 
+        - id: credenciales
+          uri: lb://ms-credenciales
+          predicates:
+            - Path=/credenciales/**
+
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+          
 server:
   port: ${SERVER_PORT_PERSONAL_COMPOSER}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: personal-composer
+    instance-id: personal-composer
 
 # App metadata
 info:

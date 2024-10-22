@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_PRODUCCION_CARNE}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-produccion-carne
+    instance-id: ms-produccion-carne
 
 # App metadata
 info:

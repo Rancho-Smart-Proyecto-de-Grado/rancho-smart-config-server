@@ -14,8 +14,6 @@ eureka:
     registerWithEureka: true
     service-url:
       defaultZone: ${EUREKA_SERVER_URL}
-  instance:
-    prefer-ip-address: true
 
 # Actuator
 management:

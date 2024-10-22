@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_CONTABILIDAD}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-contabilidad
+    instance-id: ms-contabilidad
 
 # App metadata
 info:

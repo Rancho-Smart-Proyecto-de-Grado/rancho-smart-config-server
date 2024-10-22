@@ -7,7 +7,12 @@ spring:
 server:
   port: ${SERVER_PORT_VENTAS}
 
-
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-ventas
+    instance-id: ms-ventas
+    
 # App metadata
 info:
   app:

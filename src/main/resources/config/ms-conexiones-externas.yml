@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_CONEXIONES_EXTERNAS}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-conexiones-externas
+    instance-id: ms-conexiones-externas
 
 # App metadata
 info:

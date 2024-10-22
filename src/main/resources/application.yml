@@ -7,7 +7,9 @@ spring:
         enabled: true
         native:
           search-locations:
-          - classpath:/config          
+          - classpath:/config     
+          - classpath:/config-composer
+
   profiles:
     active: native
 
@@ -20,7 +22,9 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_SERVER_URL}
   instance:
-    prefer-ip-address: true
+    preferIpAddress: false
+    hostname: config-server
+    instance-id: config-server
 
 # Actuator
 management:

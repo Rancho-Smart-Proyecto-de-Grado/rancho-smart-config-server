@@ -7,6 +7,12 @@ spring:
 server:
   port: ${SERVER_PORT_PLANIFICACION_CRUCES}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-planificacion-cruces
+    instance-id: ms-planificacion-cruces
+
 # App metadata
 info:
   app:

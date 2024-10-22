@@ -1,10 +1,21 @@
 spring:
   application:
     name: infraestructura-composer
+  cloud:
+    gateway:
+      routes:
+        - id: infraestructura
+          uri: lb://ms-infraestructura
+          predicates:
+            - Path=/infraestructura/**
 
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+          
 server:
   port: ${SERVER_PORT_INFRAESTRUCTURA_COMPOSER}
-
 
 # App metadata
 info:

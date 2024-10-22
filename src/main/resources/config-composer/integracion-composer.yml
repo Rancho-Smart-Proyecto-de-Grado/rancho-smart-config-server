@@ -1,10 +1,27 @@
 spring:
   application:
     name: integracion-composer
+  cloud:
+    gateway:
+      routes:
+        - id: conexiones-externas
+          uri: lb://ms-conexiones-externas
+          predicates:
+            - Path=/conexiones-externas/**
 
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+          
 server:
   port: ${SERVER_PORT_INTEGRACION_COMPOSER}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: integracion-composer
+    instance-id: integracion-composer
 
 # App metadata
 info:

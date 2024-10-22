@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_PRODUCCION_LECHE}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-produccion-leche
+    instance-id: ms-produccion-leche
 
 # App metadata
 info:

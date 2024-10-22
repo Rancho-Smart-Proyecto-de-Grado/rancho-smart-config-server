@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_LOTES}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-lotes
+    instance-id: ms-lotes
 
 # App metadata
 info:

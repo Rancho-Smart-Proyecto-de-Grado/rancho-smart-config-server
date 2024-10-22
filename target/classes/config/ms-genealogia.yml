@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_GENEALOGIA}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-genealogia
+    instance-id: ms-genealogia
 
 # App metadata
 info:

@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_HISTORIAL_MEDICO}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-historial-medico
+    instance-id: ms-historial-medico
 
 # App metadata
 info:

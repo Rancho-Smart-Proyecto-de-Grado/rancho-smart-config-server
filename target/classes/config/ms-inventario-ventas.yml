@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_INVENTARIO_VENTAS}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-inventario-ventas
+    instance-id: ms-inventario-ventas
 
 # App metadata
 info:

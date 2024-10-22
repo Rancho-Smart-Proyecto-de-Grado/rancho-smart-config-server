@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_VACUNAS}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-vacunas
+    instance-id: ms-vacunas
 
 # App metadata
 info:

@@ -1,10 +1,42 @@
 spring:
   application:
     name: produccion-composer
+  cloud:
+    gateway:
+      routes:
+        - id: alimentacion-suplementos
+          uri: lb://ms-alimentacion-suplementos
+          predicates:
+            - Path=/alimentacion-suplementos/**
 
+        - id: control-calidad
+          uri: lb://ms-control-calidad
+          predicates:
+            - Path=/control-calidad/**
+
+        - id: produccion-carne
+          uri: lb://ms-produccion-carne
+          predicates:
+            - Path=/produccion-carne/**
+
+        - id: produccion-leche
+          uri: lb://ms-produccion-leche
+          predicates:
+            - Path=/produccion-leche/**
+
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+          
 server:
   port: ${SERVER_PORT_PRODUCCION_COMPOSER}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: produccion-composer
+    instance-id: produccion-composer
 
 # App metadata
 info:

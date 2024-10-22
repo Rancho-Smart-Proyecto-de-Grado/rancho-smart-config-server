@@ -1,10 +1,47 @@
 spring:
   application:
     name: apareamiento-composer
+  cloud:
+    gateway:
+      routes:
+        - id: cruces
+          uri: lb://ms-cruces
+          predicates:
+            - Path=/cruces/**
 
+        - id: genealogia
+          uri: lb://ms-genealogia
+          predicates:
+            - Path=/genealogia/**
+
+        - id: optimizacion-cruces
+          uri: lb://ms-optimizacion-cruces
+          predicates:
+            - Path=/optimizacion-cruces/**
+
+        - id: planificacion-cruces
+          uri: lb://ms-planificacion-cruces
+          predicates:
+            - Path=/planificacion-cruces/**
+
+        - id: partos
+          uri: lb://ms-partos
+          predicates:
+            - Path=/partos/**
+
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+              
 server:
   port: ${SERVER_PORT_APAREAMIENTO_COMPOSER}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: apareamiento-composer
+    instance-id: apareamiento-composer
 
 # App metadata
 info:

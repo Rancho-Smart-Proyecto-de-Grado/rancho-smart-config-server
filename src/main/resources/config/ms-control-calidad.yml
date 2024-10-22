@@ -7,6 +7,12 @@ spring:
 server:
   port: ${SERVER_PORT_CONTROL_CALIDAD}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-control-calidad
+    instance-id: ms-control-calidad
+
 # App metadata
 info:
   app:

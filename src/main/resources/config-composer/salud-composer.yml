@@ -1,10 +1,47 @@
 spring:
   application:
     name: salud-composer
+  cloud:
+    gateway:
+      routes:
+        - id: consultas
+          uri: lb://ms-consultas
+          predicates:
+            - Path=/ms-consultas/**
 
+        - id: historial-medico
+          uri: lb://ms-historial-medico
+          predicates:
+            - Path=/historial-medico/**
+
+        - id: procedimientos-medicos
+          uri: lb://ms-procedimientos-medicos
+          predicates:
+            - Path=/procedimientos-medicos/**
+
+        - id: tratamientos
+          uri: lb://ms-tratamientos
+          predicates:
+            - Path=/tratamientos/**
+
+        - id: vacunas
+          uri: lb://ms-vacunas
+          predicates:
+            - Path=/vacunas/**
+
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+          
 server:
   port: ${SERVER_PORT_SALUD_COMPOSER}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: salud-composer
+    instance-id: salud-composer
 
 # App metadata
 info:

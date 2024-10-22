@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_PROCEDIMIENTOS_MEDICOS}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-procedimientos-medicos
+    instance-id: ms-procedimientos-medicos
 
 # App metadata
 info:

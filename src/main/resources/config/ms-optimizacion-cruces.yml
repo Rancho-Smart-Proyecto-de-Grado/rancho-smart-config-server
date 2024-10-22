@@ -7,6 +7,11 @@ spring:
 server:
   port: ${SERVER_PORT_OPTIMIZACION_CRUCES}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-optimizacion-cruces
+    instance-id: ms-optimizacion-cruces
 
 # App metadata
 info:

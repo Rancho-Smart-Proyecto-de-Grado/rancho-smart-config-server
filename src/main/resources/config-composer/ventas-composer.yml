@@ -1,10 +1,42 @@
 spring:
   application:
     name: ventas-composer
+  cloud:
+    gateway:
+      routes:
+        - id: clientes
+          uri: lb://ms-clientes
+          predicates:
+            - Path=/clientes/**
 
+        - id: inventario-ventas
+          uri: lb://ms-inventario-ventas
+          predicates:
+            - Path=/inventario-ventas/**
+
+        - id: mercado
+          uri: lb://ms-mercado
+          predicates:
+            - Path=/mercado/**
+
+        - id: ventas
+          uri: lb://ms-ventas
+          predicates:
+            - Path=/ventas/**
+
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+                      
 server:
   port: ${SERVER_PORT_VENTAS_COMPOSER}
 
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ventas-composer
+    instance-id: ventas-composer
 
 # App metadata
 info:
