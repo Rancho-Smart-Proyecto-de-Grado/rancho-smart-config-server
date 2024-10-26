@@ -7,7 +7,7 @@ spring:
         - id: consultas
           uri: lb://ms-consultas
           predicates:
-            - Path=/ms-consultas/**
+            - Path=/consulta/**
 
         - id: historial-medico
           uri: lb://ms-historial-medico
@@ -17,17 +17,17 @@ spring:
         - id: procedimientos-medicos
           uri: lb://ms-procedimientos-medicos
           predicates:
-            - Path=/procedimientos-medicos/**
+            - Path=/procedimiento-medico/**
 
         - id: tratamientos
           uri: lb://ms-tratamientos
           predicates:
-            - Path=/tratamientos/**
+            - Path=/tratamiento/**
 
         - id: vacunas
           uri: lb://ms-vacunas
           predicates:
-            - Path=/vacunas/**
+            - Path=/vacuna/**
 
       discovery:
         locator:

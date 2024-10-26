@@ -7,7 +7,7 @@ spring:
         - id: cruces
           uri: lb://ms-cruces
           predicates:
-            - Path=/cruces/**
+            - Path=/cruce/**
 
         - id: genealogia
           uri: lb://ms-genealogia
@@ -27,7 +27,7 @@ spring:
         - id: partos
           uri: lb://ms-partos
           predicates:
-            - Path=/partos/**
+            - Path=/parto/**
 
       discovery:
         locator:

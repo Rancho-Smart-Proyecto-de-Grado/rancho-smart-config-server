@@ -7,17 +7,17 @@ spring:
         - id: alimentos
           uri: lb://ms-alimentos
           predicates:
-            - Path=/alimentos/**
+            - Path=/alimento/**
 
         - id: animales
           uri: lb://ms-animales
           predicates:
-            - Path=/animales/**
+            - Path=/animal/**
 
         - id: lotes
           uri: lb://ms-lotes
           predicates:
-            - Path=/lotes/**
+            - Path=/lote/**
             
       discovery:
         locator:
