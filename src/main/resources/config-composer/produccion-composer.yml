@@ -7,22 +7,22 @@ spring:
         - id: alimentacion-suplementos
           uri: lb://ms-alimentacion-suplementos
           predicates:
-            - Path=/alimentacion-suplementos/**
+            - Path=/registros-alimentacion/**
 
         - id: control-calidad
           uri: lb://ms-control-calidad
           predicates:
-            - Path=/control-calidad/**
+            - Path=/calidades-carne/**, /calidades-leche/**
 
         - id: produccion-carne
           uri: lb://ms-produccion-carne
           predicates:
-            - Path=/produccion-carne/**
+            - Path=/producciones-carne/**
 
         - id: produccion-leche
           uri: lb://ms-produccion-leche
           predicates:
-            - Path=/produccion-leche/**
+            - Path=/producciones-leche/**
 
       discovery:
         locator:

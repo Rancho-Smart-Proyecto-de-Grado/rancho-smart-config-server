@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ms-productos
+  datasource:
+    url: ${DB_MS_PRODUCTOS_URL}
+
+server:
+  port: ${SERVER_PORT_PRODUCTOS}
+
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: ms-productos
+    instance-id: ms-productos
+
+# App metadata
+info:
+  app:
+    name: Productos
+    description: 
+    version: 1.0.0
+  company:
+    name: Rancho Smart
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}

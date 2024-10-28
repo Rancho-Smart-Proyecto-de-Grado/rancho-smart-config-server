@@ -7,7 +7,7 @@ spring:
         - id: infraestructura
           uri: lb://ms-infraestructura
           predicates:
-            - Path=/infraestructura/**
+            - Path=/fincas/**
 
       discovery:
         locator:

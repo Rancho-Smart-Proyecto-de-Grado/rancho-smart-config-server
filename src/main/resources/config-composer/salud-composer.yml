@@ -7,27 +7,27 @@ spring:
         - id: consultas
           uri: lb://ms-consultas
           predicates:
-            - Path=/consulta/**
+            - Path=/consultas/**
 
         - id: historial-medico
           uri: lb://ms-historial-medico
           predicates:
-            - Path=/historial-medico/**
+            - Path=/historiales-medicos/**
 
         - id: procedimientos-medicos
           uri: lb://ms-procedimientos-medicos
           predicates:
-            - Path=/procedimiento-medico/**
+            - Path=/procedimientos-medicos/**
 
         - id: tratamientos
           uri: lb://ms-tratamientos
           predicates:
-            - Path=/tratamiento/**
+            - Path=/tratamientos/**
 
         - id: vacunas
           uri: lb://ms-vacunas
           predicates:
-            - Path=/vacuna/**
+            - Path=/vacunas/**
 
       discovery:
         locator:

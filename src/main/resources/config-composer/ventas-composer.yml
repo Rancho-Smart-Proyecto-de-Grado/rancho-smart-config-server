@@ -7,12 +7,12 @@ spring:
         - id: clientes
           uri: lb://ms-clientes
           predicates:
-            - Path=/cliente/**
+            - Path=/clientes/**
 
         - id: inventario-ventas
           uri: lb://ms-inventario-ventas
           predicates:
-            - Path=/inventario-ventas/**
+            - Path=/animales-venta/**
 
         - id: mercado
           uri: lb://ms-mercado
@@ -22,7 +22,7 @@ spring:
         - id: ventas
           uri: lb://ms-ventas
           predicates:
-            - Path=/venta/**
+            - Path=/ventas/**, /ventas-produccion/** 
 
       discovery:
         locator:

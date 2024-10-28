@@ -7,12 +7,12 @@ spring:
         - id: usuarios
           uri: lb://ms-usuarios
           predicates:
-            - Path=/usuario/**
+            - Path=/usuarios/**
 
         - id: credenciales
           uri: lb://ms-credenciales
           predicates:
-            - Path=/credencial/**
+            - Path=/credenciales/**
 
       discovery:
         locator:
