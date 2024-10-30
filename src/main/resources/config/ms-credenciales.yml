@@ -3,6 +3,17 @@ spring:
     name: ms-credenciales
   datasource:
     url: ${DB_MS_CREDENCIALES_URL}
+  kafka:
+    consumer:
+      group-id: personal
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 
 server:
   port: ${SERVER_PORT_CREDENCIALES}

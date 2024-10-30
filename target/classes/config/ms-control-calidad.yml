@@ -3,7 +3,18 @@ spring:
     name: ms-control-calidad
   datasource:
     url: ${DB_MS_CONTROL_CALIDAD_URL}
-
+  kafka:
+    consumer:
+      group-id: produccion
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
+                    
 server:
   port: ${SERVER_PORT_CONTROL_CALIDAD}
 

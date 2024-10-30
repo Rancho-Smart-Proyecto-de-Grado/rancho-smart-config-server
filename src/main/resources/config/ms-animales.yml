@@ -3,7 +3,17 @@ spring:
     name: ms-animales
   datasource:
     url: ${DB_MS_ANIMALES_URL}
-
+  kafka:
+    consumer:
+      group-id: inventario
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 server:
   port: ${SERVER_PORT_ANIMALES}
 

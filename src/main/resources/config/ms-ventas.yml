@@ -3,6 +3,17 @@ spring:
     name: ms-ventas
   datasource:
     url: ${DB_MS_VENTAS_URL}
+  kafka:
+    consumer:
+      group-id: ventas
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 
 server:
   port: ${SERVER_PORT_VENTAS}

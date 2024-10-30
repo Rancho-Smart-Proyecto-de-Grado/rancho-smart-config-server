@@ -3,7 +3,17 @@ spring:
     name: ms-contabilidad
   datasource:
     url: ${DB_MS_CONTABILIDAD_URL}
-
+  kafka:
+    consumer:
+      group-id: finanzas
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 server:
   port: ${SERVER_PORT_CONTABILIDAD}
 

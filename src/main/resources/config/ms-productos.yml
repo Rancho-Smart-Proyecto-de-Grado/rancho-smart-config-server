@@ -3,6 +3,17 @@ spring:
     name: ms-productos
   datasource:
     url: ${DB_MS_PRODUCTOS_URL}
+  kafka:
+    consumer:
+      group-id: inventario
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 
 server:
   port: ${SERVER_PORT_PRODUCTOS}

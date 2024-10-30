@@ -3,8 +3,19 @@ spring:
     name: ms-procedimientos-medicos
   datasource:
     url: ${DB_MS_PROCEDIMIENTOS_MEDICOS_URL}
+  kafka:
+    consumer:
+      group-id: salud
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 
-server:
+server: 
   port: ${SERVER_PORT_PROCEDIMIENTOS_MEDICOS}
 
 eureka:

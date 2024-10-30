@@ -3,7 +3,17 @@ spring:
     name: ms-conexiones-externas
   datasource:
     url: ${DB_MS_CONEXIONES_EXTERNAS_URL}
-
+  kafka:
+    consumer:
+      group-id: integracion
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 server:
   port: ${SERVER_PORT_CONEXIONES_EXTERNAS}
 

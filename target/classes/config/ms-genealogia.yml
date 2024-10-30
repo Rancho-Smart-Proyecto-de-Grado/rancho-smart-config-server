@@ -3,6 +3,17 @@ spring:
     name: ms-genealogia
   datasource:
     url: ${DB_MS_GENEALOGIA_URL}
+  kafka:
+    consumer:
+      group-id: apareamiento
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 
 server:
   port: ${SERVER_PORT_GENEALOGIA}

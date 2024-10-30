@@ -3,6 +3,9 @@ spring:
     name: ms-historial-medico
   datasource:
     url: ${DB_MS_HISTORIAL_MEDICO_URL}
+  kafka:
+    consumer:
+      group-id: salud
 
 server:
   port: ${SERVER_PORT_HISTORIAL_MEDICO}

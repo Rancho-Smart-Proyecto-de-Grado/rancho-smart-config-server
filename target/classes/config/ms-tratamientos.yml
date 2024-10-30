@@ -3,6 +3,17 @@ spring:
     name: ms-tratamientos
   datasource:
     url: ${DB_MS_TRATAMIENTOS_URL}
+  kafka:
+    consumer:
+      group-id: salud
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 
 server:
   port: ${SERVER_PORT_TRATAMIENTOS}

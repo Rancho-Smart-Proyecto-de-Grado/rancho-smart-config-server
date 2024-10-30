@@ -3,7 +3,17 @@ spring:
     name: ms-consultas
   datasource:
     url: ${DB_MS_CONSULTAS_URL}
-
+  kafka:
+    consumer:
+      group-id: salud
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
 server:
   port: ${SERVER_PORT_CONSULTAS}
 

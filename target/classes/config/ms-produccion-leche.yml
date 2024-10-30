@@ -3,7 +3,18 @@ spring:
     name: ms-produccion-leche
   datasource:
     url: ${DB_MS_PRODUCCION_LECHE_URL}
-
+  kafka:
+    consumer:
+      group-id: produccion
+      properties:
+        spring:
+          deserializer:
+            value:
+              json:
+                type:
+                  mappings:
+                    animalDTO: com.rancho_smart.dto.AnimalDTO
+                    
 server:
   port: ${SERVER_PORT_PRODUCCION_LECHE}
 
